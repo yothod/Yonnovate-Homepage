@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yonnovate — Coming Soon</title>
+  <meta name="description" content="Yonnovate — Building what's next." />
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #ffffff;
+      --muted: rgba(255,255,255,0.78);
+      --link: rgba(255,255,255,0.92);
+      --max-width: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.72)),
+        url("https://drive.google.com/uc?export=view&id=1UKcIcPtIWykECsuSl1aKyRPVWHTrDwyS") center center / cover no-repeat;
+      transform: scale(1.03);
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+
+    .content {
+      width: 100%;
+      max-width: var(--max-width);
+      text-align: center;
+    }
+
+    .logo {
+      width: min(620px, 88vw);
+      height: auto;
+      display: block;
+      margin: 0 auto 34px;
+      filter: brightness(0) invert(1);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 7vw, 5.8rem);
+      line-height: 0.96;
+      font-weight: 700;
+      letter-spacing: -0.055em;
+      text-wrap: balance;
+    }
+
+    .soon {
+      margin: 18px 0 0;
+      font-size: clamp(0.98rem, 1.6vw, 1.2rem);
+      line-height: 1.4;
+      color: var(--muted);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .contact {
+      display: inline-block;
+      margin-top: 44px;
+      color: var(--link);
+      text-decoration: none;
+      font-size: 0.98rem;
+      line-height: 1.2;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      border-bottom: 1px solid rgba(255,255,255,0.32);
+      padding-bottom: 3px;
+      transition: border-color 0.2s ease, opacity 0.2s ease;
+    }
+
+    .contact:hover {
+      opacity: 0.88;
+      border-color: rgba(255,255,255,0.7);
+    }
+
+    @media (max-width: 640px) {
+      .logo { margin-bottom: 26px; }
+      .soon { margin-top: 14px; }
+      .contact { margin-top: 34px; }
+      .bg { transform: scale(1.06); }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <section class="content" aria-label="Coming soon">
+      <img
+        class="logo"
+        src="https://drive.google.com/uc?export=view&id=1qAQIvEz810OLGKC7I95NgDtfe21IcMEw"
+        alt="Yonnovate logo"
+      />
+
+      <h1>Building what’s next</h1>
+      <p class="soon">Launching soon</p>
+
+      <a class="contact" href="mailto:y@yonnovate.com">Contact</a>
+    </section>
+  </main>
+</body>
+</html>
