@@ -4,17 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yonnovate — Coming Soon</title>
-  <meta name="description" content="Yonnovate — Building what's next." />
+  <meta name="description" content="Yonnovate — Building what’s next." />
   <style>
     :root {
       --bg: #000000;
       --text: #ffffff;
-      --muted: rgba(255,255,255,0.78);
-      --link: rgba(255,255,255,0.92);
-      --max-width: 1100px;
+      --muted: rgba(255, 255, 255, 0.72);
+      --link: rgba(255, 255, 255, 0.9);
+      --max-width: 1400px;
+      --side-pad: clamp(24px, 4vw, 56px);
+      --top-pad: clamp(28px, 4vw, 40px);
+      --bottom-pad: clamp(28px, 4vw, 40px);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     html, body {
       margin: 0;
@@ -35,8 +40,9 @@
       position: fixed;
       inset: 0;
       background:
-        linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.72)),
-        url("https://drive.google.com/file/d/1t1KL4fx7_HcBiNLAsSnUlD5ohhifBXP6/view?usp=sharing") center center / cover no-repeat;
+        radial-gradient(circle at 50% 45%, rgba(255,255,255,0.06), transparent 38%),
+        linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.78)),
+        url("https://drive.google.com/uc?export=view&id=1t1KL4fx7_HcBiNLAsSnUlD5ohhifBXP6") center center / cover no-repeat;
       transform: scale(1.03);
     }
 
@@ -44,68 +50,125 @@
       position: relative;
       z-index: 1;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 24px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: var(--top-pad) var(--side-pad) var(--bottom-pad);
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto;
     }
 
-    .content {
-      width: 100%;
-      max-width: var(--max-width);
-      text-align: center;
+    .brand {
+      align-self: start;
+      justify-self: start;
     }
 
     .logo {
-      width: min(620px, 88vw);
+      width: min(420px, 42vw);
       height: auto;
       display: block;
-      margin: 0 auto 34px;
-      
+    }
+
+    .hero {
+      align-self: center;
+      justify-self: start;
+      width: 100%;
+      max-width: 980px;
+      padding-left: clamp(0px, 7vw, 110px);
+      margin-top: clamp(10px, 2vh, 20px);
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(2.2rem, 7vw, 5.8rem);
-      line-height: 0.96;
+      max-width: 9ch;
+      font-size: clamp(3.1rem, 8vw, 7.3rem);
+      line-height: 0.93;
       font-weight: 700;
-      letter-spacing: -0.055em;
+      letter-spacing: -0.06em;
       text-wrap: balance;
     }
 
     .soon {
       margin: 18px 0 0;
-      font-size: clamp(0.98rem, 1.6vw, 1.2rem);
-      line-height: 1.4;
+      font-size: clamp(1rem, 1.4vw, 1.15rem);
+      line-height: 1.35;
       color: var(--muted);
       font-weight: 500;
       letter-spacing: -0.01em;
     }
 
+    .footer-row {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: end;
+    }
+
     .contact {
       display: inline-block;
-      margin-top: 44px;
       color: var(--link);
       text-decoration: none;
       font-size: 0.98rem;
       line-height: 1.2;
       font-weight: 500;
       letter-spacing: -0.01em;
-      border-bottom: 1px solid rgba(255,255,255,0.32);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.22);
       padding-bottom: 3px;
       transition: border-color 0.2s ease, opacity 0.2s ease;
     }
 
     .contact:hover {
       opacity: 0.88;
-      border-color: rgba(255,255,255,0.7);
+      border-color: rgba(255, 255, 255, 0.72);
+    }
+
+    @media (max-width: 900px) {
+      .logo {
+        width: min(340px, 64vw);
+      }
+
+      .hero {
+        padding-left: 0;
+        justify-self: center;
+        text-align: center;
+        max-width: 760px;
+      }
+
+      h1 {
+        max-width: none;
+      }
+
+      .footer-row {
+        justify-content: center;
+        margin-top: 24px;
+      }
     }
 
     @media (max-width: 640px) {
-      .logo { margin-bottom: 26px; }
-      .soon { margin-top: 14px; }
-      .contact { margin-top: 34px; }
-      .bg { transform: scale(1.06); }
+      .bg {
+        transform: scale(1.06);
+      }
+
+      .wrap {
+        padding-top: 24px;
+        padding-bottom: 28px;
+      }
+
+      .brand {
+        justify-self: center;
+      }
+
+      .logo {
+        width: min(300px, 72vw);
+      }
+
+      .hero {
+        margin-top: 0;
+      }
+
+      .soon {
+        margin-top: 14px;
+      }
     }
   </style>
 </head>
@@ -113,18 +176,22 @@
   <div class="bg" aria-hidden="true"></div>
 
   <main class="wrap">
-    <section class="content" aria-label="Coming soon">
+    <div class="brand">
       <img
         class="logo"
         src="logo1.png"
         alt="Yonnovate logo"
       />
+    </div>
 
+    <section class="hero" aria-label="Coming soon">
       <h1>Building what’s next</h1>
       <p class="soon">Launching soon</p>
-
-      <a class="contact" href="mailto:y@yonnovate.com">Contact</a>
     </section>
+
+    <div class="footer-row">
+      <a class="contact" href="mailto:y@yonnovate.com">Contact</a>
+    </div>
   </main>
 </body>
 </html>
