@@ -45,23 +45,22 @@
       /* SILVER SHINE EFFECT */
       background: linear-gradient(
         100deg,
-        #6b6b6b 20%,
-        #e8e8e8 45%,
+        #c0c0c0 0%,
+        #f8f8f8 30%,
         #ffffff 50%,
-        #e8e8e8 55%,
-        #6b6b6b 80%
+        #f8f8f8 70%,
+        #c0c0c0 100%
       );
-      background-size: 250% auto;
-      -webkit-background-clip: text;
+      background-size: 300% auto;
       background-clip: text;
+      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent;
-      animation: shine 4s linear infinite;
+      animation: shine 3.5s ease-in-out infinite;
     }
     @keyframes shine {
-      to {
-        background-position: -250% center;
-      }
+      0% { background-position: 200% center; }
+      100% { background-position: -200% center; }
     }
     .soon {
       margin-top: 18px;
