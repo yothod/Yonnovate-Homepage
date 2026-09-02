@@ -122,7 +122,6 @@
     grid-template-areas:
       "name-l   name-r"
       "role-l   role-r"
-      "email-l  email-r"
       "url-l    url-r";
     column-gap: 20px;
   }
@@ -137,8 +136,6 @@
   .name-r  { grid-area: name-r; }
   .role-l  { grid-area: role-l; border-right: 1px solid var(--hairline); }
   .role-r  { grid-area: role-r; }
-  .email-l { grid-area: email-l; border-right: 1px solid var(--hairline); }
-  .email-r { grid-area: email-r; }
   .url-l   { grid-area: url-l; border-right: 1px solid var(--hairline); }
   .url-r   { grid-area: url-r; }
 
@@ -166,10 +163,6 @@
     font-size: 11.5px;
     word-break: break-word;
     transition: border-color 0.2s ease, color 0.2s ease;
-  }
-
-  .email-l .entity-link, .email-r .entity-link {
-    margin-bottom: 6px;
   }
 
   .entity-link:hover, .entity-link:focus-visible {
@@ -237,12 +230,10 @@
       grid-template-areas:
         "name-l"
         "role-l"
-        "email-l"
         "url-l"
         "mid"
         "name-r"
         "role-r"
-        "email-r"
         "url-r";
       row-gap: 4px;
     }
@@ -278,9 +269,6 @@
       <div class="role-l"><div class="entity-role">Managing Partner,<br>Israel &amp; MENA</div></div>
       <div class="role-r"><div class="entity-role">Founder &amp; CEO</div></div>
 
-      <div class="email-l"><a class="entity-link" href="mailto:hod@compasshealthcare.eu">hod@compasshealthcare.eu</a></div>
-      <div class="email-r"><a class="entity-link" href="mailto:y@yonnovate.com">y@yonnovate.com</a></div>
-
       <div class="url-l"><a class="entity-link" href="https://www.compasshealthcare.eu" target="_blank" rel="noopener">www.compasshealthcare.eu</a></div>
       <div class="url-r"><a class="entity-link" href="https://www.yonnovate.com" target="_blank" rel="noopener">www.yonnovate.com</a></div>
 
@@ -290,6 +278,13 @@
     <div class="hairline"></div>
 
     <div class="actions">
+      <a class="action" href="mailto:hod@compasshealthcare.eu" aria-label="Email Yotam">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <path d="m22 6-10 7L2 6"/>
+        </svg>
+        Email
+      </a>
       <a class="action" href="tel:+972528888188" aria-label="Call Yotam">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
