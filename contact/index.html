@@ -133,23 +133,14 @@
     min-width: 0;
   }
 
-  .name-l  { grid-area: name-l; }
+  .name-l  { grid-area: name-l; border-right: 1px solid var(--hairline); }
   .name-r  { grid-area: name-r; }
-  .role-l  { grid-area: role-l; }
+  .role-l  { grid-area: role-l; border-right: 1px solid var(--hairline); }
   .role-r  { grid-area: role-r; }
-  .email-l { grid-area: email-l; }
+  .email-l { grid-area: email-l; border-right: 1px solid var(--hairline); }
   .email-r { grid-area: email-r; }
-  .url-l   { grid-area: url-l; }
+  .url-l   { grid-area: url-l; border-right: 1px solid var(--hairline); }
   .url-r   { grid-area: url-r; }
-
-  .entity-divider {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 1px;
-    background: var(--hairline);
-  }
 
   .entity-name {
     font-size: 12.5px;
@@ -256,10 +247,6 @@
       row-gap: 4px;
     }
 
-    .entity-divider {
-      display: none;
-    }
-
     .mid-hairline {
       display: block;
       grid-area: mid;
@@ -297,7 +284,6 @@
       <div class="url-l"><a class="entity-link" href="https://www.compasshealthcare.eu" target="_blank" rel="noopener">www.compasshealthcare.eu</a></div>
       <div class="url-r"><a class="entity-link" href="https://www.yonnovate.com" target="_blank" rel="noopener">www.yonnovate.com</a></div>
 
-      <div class="entity-divider"></div>
       <div class="mid-hairline"></div>
     </div>
 
