@@ -116,22 +116,39 @@
   }
 
   .entities-row {
-    display: flex;
-    align-items: stretch;
-    gap: 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "name-l   name-r"
+      "role-l   role-r"
+      "email-l  email-r"
+      "url-l    url-r";
+    column-gap: 20px;
   }
 
-  .entity {
-    flex: 1;
-    min-width: 0;
+  .entities-row > div {
     text-align: center;
     padding: 0 14px;
+    min-width: 0;
   }
 
+  .name-l  { grid-area: name-l; }
+  .name-r  { grid-area: name-r; }
+  .role-l  { grid-area: role-l; }
+  .role-r  { grid-area: role-r; }
+  .email-l { grid-area: email-l; }
+  .email-r { grid-area: email-r; }
+  .url-l   { grid-area: url-l; }
+  .url-r   { grid-area: url-r; }
+
   .entity-divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
     width: 1px;
     background: var(--hairline);
-    flex-shrink: 0;
   }
 
   .entity-name {
@@ -147,41 +164,30 @@
     color: var(--muted);
     margin-bottom: 12px;
     line-height: 1.4;
-    min-height: calc(1.4em * 2);
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
   }
 
-  .entity-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    font-size: 11.5px;
-    word-break: break-word;
-  }
-
-  .entity-links .sep {
-    display: none;
-  }
-
-  .entity-links a {
+  .entity-link {
+    display: block;
     color: var(--ink);
     text-decoration: none;
     border-bottom: 1px solid var(--hairline);
     padding-bottom: 1px;
+    font-size: 11.5px;
+    word-break: break-word;
     transition: border-color 0.2s ease, color 0.2s ease;
   }
 
-  .entity-links a:hover, .entity-links a:focus-visible {
+  .email-l .entity-link, .email-r .entity-link {
+    margin-bottom: 6px;
+  }
+
+  .entity-link:hover, .entity-link:focus-visible {
     color: var(--metal-b);
     border-color: var(--metal-a);
   }
 
-  .sep {
-    color: var(--hairline);
+  .mid-hairline {
+    display: none;
   }
 
   .actions {
@@ -236,13 +242,30 @@
     .name { font-size: 28px; }
 
     .entities-row {
-      flex-direction: column;
-      gap: 20px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "name-l"
+        "role-l"
+        "email-l"
+        "url-l"
+        "mid"
+        "name-r"
+        "role-r"
+        "email-r"
+        "url-r";
+      row-gap: 4px;
     }
 
     .entity-divider {
-      width: auto;
+      display: none;
+    }
+
+    .mid-hairline {
+      display: block;
+      grid-area: mid;
       height: 1px;
+      background: var(--hairline);
+      margin: 16px 0;
     }
   }
 </style>
@@ -262,25 +285,20 @@
     <div class="hairline"></div>
 
     <div class="entities-row">
-      <div class="entity">
-        <div class="entity-name">Yonnovate</div>
-        <div class="entity-role">Founder &amp; CEO</div>
-        <div class="entity-links">
-          <a href="mailto:y@yonnovate.com">y@yonnovate.com</a>
-          <a href="https://www.yonnovate.com" target="_blank" rel="noopener">www.yonnovate.com</a>
-        </div>
-      </div>
+      <div class="name-l"><div class="entity-name">Compass Healthcare</div></div>
+      <div class="name-r"><div class="entity-name">Yonnovate</div></div>
+
+      <div class="role-l"><div class="entity-role">Managing Partner,<br>Israel &amp; MENA</div></div>
+      <div class="role-r"><div class="entity-role">Founder &amp; CEO</div></div>
+
+      <div class="email-l"><a class="entity-link" href="mailto:hod@compasshealthcare.eu">hod@compasshealthcare.eu</a></div>
+      <div class="email-r"><a class="entity-link" href="mailto:y@yonnovate.com">y@yonnovate.com</a></div>
+
+      <div class="url-l"><a class="entity-link" href="https://www.compasshealthcare.eu" target="_blank" rel="noopener">www.compasshealthcare.eu</a></div>
+      <div class="url-r"><a class="entity-link" href="https://www.yonnovate.com" target="_blank" rel="noopener">www.yonnovate.com</a></div>
 
       <div class="entity-divider"></div>
-
-      <div class="entity">
-        <div class="entity-name">Compass Healthcare</div>
-        <div class="entity-role">Managing Partner,<br>Israel &amp; MENA</div>
-        <div class="entity-links">
-          <a href="mailto:hod@compasshealthcare.eu">hod@compasshealthcare.eu</a>
-          <a href="https://www.compasshealthcare.eu" target="_blank" rel="noopener">www.compasshealthcare.eu</a>
-        </div>
-      </div>
+      <div class="mid-hairline"></div>
     </div>
 
     <div class="hairline"></div>
