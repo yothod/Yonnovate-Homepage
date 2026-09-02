@@ -45,27 +45,29 @@
       /* METALLIC SILVER SHINE */
       background: linear-gradient(
         100deg,
-        #a7aaad 0%,
-        #b7babd 12%,
-        #d6d8da 25%,
-        #f0f1f2 37%,
-        #d6d8da 50%,
-        #b7babd 62%,
-        #c4c6c9 75%,
-        #e2e4e5 87%,
-        #a7aaad 100%
+        #6e7173 0%,
+        #8b8e91 10%,
+        #b7bac0 20%,
+        #e4e6ea 30%,
+        #ffffff 40%,
+        #e4e6ea 50%,
+        #b7bac0 60%,
+        #8b8e91 70%,
+        #6e7173 80%,
+        #8b8e91 90%,
+        #b7bac0 100%
       );
-      background-size: 300% auto;
+      background-size: 320% auto;
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.4);
-      animation: shine 18s ease-in-out infinite;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+      animation: shine 9s cubic-bezier(0.45, 0, 0.55, 1) infinite;
     }
     @keyframes shine {
-      0% { background-position: 220% center; }
-      100% { background-position: -220% center; }
+      0% { background-position: 260% center; }
+      100% { background-position: -260% center; }
     }
     .soon {
       margin-top: 18px;
@@ -113,7 +115,7 @@
 </head>
 <body>
   <!-- LOGO -->
-  <img class="logo" src="logo1.png" alt="Yonnovate logo" />
+  <img class="logo" src="logo1" alt="Yonnovate logo" />
   <!-- HERO -->
   <div class="hero">
     <h1>Your bridge to health innovation across Israel & MENA</h1>
