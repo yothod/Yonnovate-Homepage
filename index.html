@@ -33,38 +33,39 @@
     /* HERO */
     .hero {
       margin-top: 80px;
+      max-width: 1000px;
     }
- h1 {
-      font-size: clamp(3rem, 6vw, 6rem);
-      line-height: 1;
+    h1 {
+      font-size: clamp(1.9rem, 3.6vw, 3.6rem);
+      line-height: 1.15;
       margin: 0;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.02em;
       font-weight: 700;
       text-transform: uppercase;
-      white-space: nowrap;
       /* METALLIC SILVER SHINE */
       background: linear-gradient(
         100deg,
-        #8a8d90 0%,
-        #c7cacd 20%,
-        #eef0f1 35%,
-        #9a9d9f 45%,
-        #d8dadc 55%,
-        #eef0f1 65%,
-        #aeb1b3 80%,
-        #c7cacd 100%
+        #a7aaad 0%,
+        #b7babd 12%,
+        #d6d8da 25%,
+        #f0f1f2 37%,
+        #d6d8da 50%,
+        #b7babd 62%,
+        #c4c6c9 75%,
+        #e2e4e5 87%,
+        #a7aaad 100%
       );
-      background-size: 250% auto;
+      background-size: 300% auto;
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       color: transparent;
       text-shadow: 0 1px 2px rgba(0,0,0,0.4);
-      animation: shine 14s linear infinite;
+      animation: shine 18s ease-in-out infinite;
     }
     @keyframes shine {
-      0% { background-position: 200% center; }
-      100% { background-position: -200% center; }
+      0% { background-position: 220% center; }
+      100% { background-position: -220% center; }
     }
     .soon {
       margin-top: 18px;
@@ -102,9 +103,7 @@
       .hero {
         margin-top: 40px;
         text-align: center;
-      }
-      h1 {
-        white-space: normal;
+        max-width: 100%;
       }
       .footer {
         justify-content: center;
