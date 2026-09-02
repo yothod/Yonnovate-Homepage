@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yotam Hod — Contact</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340;9..144,480&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #000000;
+    --ink: #EDEDEE;
+    --muted: #9C9CA1;
+    --hairline: #3A3A3E;
+    --metal-a: #C9CBCE;
+    --metal-b: #F5F5F6;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--black);
+    color: var(--ink);
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .plate { animation: rise 0.7s ease-out both; }
+    .glow { animation: bloom 1.4s ease-out both; }
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes bloom {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .plate {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    padding: 1px;
+    border-radius: 2px;
+    background: linear-gradient(155deg, var(--metal-a) 0%, var(--hairline) 18%, var(--hairline) 82%, var(--metal-b) 100%);
+  }
+
+  .plate-inner {
+    background: var(--black);
+    border-radius: 1px;
+    padding: 52px 36px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glow {
+    position: absolute;
+    top: -180px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 480px;
+    height: 320px;
+    background: radial-gradient(ellipse at center, rgba(237,237,238,0.10) 0%, rgba(237,237,238,0) 70%);
+    pointer-events: none;
+  }
+
+  .header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 34px;
+  }
+
+  .name {
+    font-family: 'Fraunces', serif;
+    font-weight: 480;
+    font-size: 34px;
+    letter-spacing: 0.01em;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+
+  .name-rule {
+    width: 46px;
+    height: 1px;
+    margin: 16px auto 16px;
+    background: linear-gradient(90deg, var(--metal-a), var(--metal-b));
+  }
+
+  .tagline {
+    font-family: 'Fraunces', serif;
+    font-weight: 340;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--muted);
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .hairline {
+    height: 1px;
+    background: var(--hairline);
+    margin: 28px 0;
+  }
+
+  .entities-row {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .entity {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    padding: 0 14px;
+  }
+
+  .entity-divider {
+    width: 1px;
+    background: var(--hairline);
+    flex-shrink: 0;
+  }
+
+  .entity-name {
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+
+  .entity-role {
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-bottom: 12px;
+    line-height: 1.4;
+    min-height: calc(1.4em * 2);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .entity-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 11.5px;
+    word-break: break-word;
+  }
+
+  .entity-links .sep {
+    display: none;
+  }
+
+  .entity-links a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: 1px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .entity-links a:hover, .entity-links a:focus-visible {
+    color: var(--metal-b);
+    border-color: var(--metal-a);
+  }
+
+  .sep {
+    color: var(--hairline);
+  }
+
+  .actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .action {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 8px 12px;
+    border: 1px solid var(--hairline);
+    border-radius: 2px;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 11.5px;
+    letter-spacing: 0.02em;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+  }
+
+  .action:hover, .action:focus-visible {
+    border-color: var(--metal-a);
+    background: rgba(237,237,238,0.04);
+    transform: translateY(-1px);
+  }
+
+  .action svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--ink);
+  }
+
+  .footer-line {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+  }
+
+  a:focus-visible, .action:focus-visible {
+    outline: 1px solid var(--metal-b);
+    outline-offset: 2px;
+  }
+
+  @media (max-width: 380px) {
+    .plate-inner { padding: 44px 26px 32px; }
+    .name { font-size: 28px; }
+
+    .entities-row {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .entity-divider {
+      width: auto;
+      height: 1px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="plate">
+  <div class="plate-inner">
+    <div class="glow"></div>
+
+    <div class="header">
+      <div class="name">Yotam Hod</div>
+      <div class="name-rule"></div>
+      <div class="tagline">Your bridge to health innovation across<br>Israel &amp; MENA.</div>
+    </div>
+
+    <div class="hairline"></div>
+
+    <div class="entities-row">
+      <div class="entity">
+        <div class="entity-name">Yonnovate</div>
+        <div class="entity-role">Founder &amp; CEO</div>
+        <div class="entity-links">
+          <a href="mailto:y@yonnovate.com">y@yonnovate.com</a>
+          <a href="https://www.yonnovate.com" target="_blank" rel="noopener">www.yonnovate.com</a>
+        </div>
+      </div>
+
+      <div class="entity-divider"></div>
+
+      <div class="entity">
+        <div class="entity-name">Compass Healthcare</div>
+        <div class="entity-role">Managing Partner,<br>Israel &amp; MENA</div>
+        <div class="entity-links">
+          <a href="mailto:hod@compasshealthcare.eu">hod@compasshealthcare.eu</a>
+          <a href="https://www.compasshealthcare.eu" target="_blank" rel="noopener">www.compasshealthcare.eu</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hairline"></div>
+
+    <div class="actions">
+      <a class="action" href="tel:+972528888188" aria-label="Call Yotam">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        Call
+      </a>
+      <a class="action" href="https://wa.me/972528888188" target="_blank" rel="noopener" aria-label="Message on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        </svg>
+        WhatsApp
+      </a>
+      <a class="action" href="https://www.linkedin.com/in/yotamhod/" target="_blank" rel="noopener" aria-label="View LinkedIn profile">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V8h4v1.5A5 5 0 0 1 16 8z"/>
+          <rect x="2" y="9" width="4" height="12"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
