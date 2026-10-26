@@ -370,33 +370,6 @@
     </div>
   </section>
 
-    <section class="chain" id="chain" aria-labelledby="chain-title">
-      <h2 id="chain-title" class="sr-only">Idea. Execution. Shelf.</h2>
-
-      <div class="arcbox" aria-hidden="true">
-        <svg viewBox="270 -20 1330 230" focusable="false">
-          <path class="crescent" fill="var(--teal-light)" d="M276.80 194.30 L322.50 120.80 C703.42 -19.11 1208.28 -16.89 1576.50 161.00 L1570.75 164.67 C1167.66 6.74 671.48 9.81 276.80 194.30Z"/>
-        </svg>
-        <div class="exec-label">Execution</div>
-        <span class="node big idea" style="left:8.93%;top:62.52%"><span class="pin"></span><span class="lbl">Idea</span></span>
-        <span class="node" style="left:26.39%;top:36.5%"><span class="pin"></span><span class="lbl">Ingredients</span></span>
-        <span class="node" style="left:38.2%;top:27.43%"><span class="pin"></span><span class="lbl">Formulation</span></span>
-        <span class="node" style="left:50.18%;top:24.52%"><span class="pin"></span><span class="lbl">Manufacturing</span></span>
-        <span class="node" style="left:62.16%;top:27.81%"><span class="pin"></span><span class="lbl">Regulation</span></span>
-        <span class="node" style="left:73.95%;top:37.34%"><span class="pin"></span><span class="lbl">Logistics</span></span>
-        <span class="node big" style="left:96.7%;top:76.24%"><span class="pin"></span><span class="lbl">Shelf</span></span>
-      </div>
-
-      <ol class="chain-list">
-        <li class="big">Idea</li>
-        <li class="sub">Ingredients</li>
-        <li class="sub">Formulation</li>
-        <li class="sub">Manufacturing</li>
-        <li class="sub">Regulation</li>
-        <li class="sub">Logistics</li>
-        <li class="big">Shelf</li>
-      </ol>
-    </section>
   </main>
 
   <footer>
@@ -422,21 +395,6 @@
       if (img.complete && img.naturalWidth === 0) fail();
     });
 
-    // Idea. Execution. Shelf.: draw the arc when it scrolls into view.
-    (function () {
-      var chain = document.getElementById('chain');
-      if (!('IntersectionObserver' in window)) return;
-      chain.classList.add('pre');
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (!e.isIntersecting) return;
-          chain.classList.add('in');
-          chain.classList.remove('pre');
-          io.disconnect();
-        });
-      }, { threshold: 0.35 });
-      io.observe(chain);
-    })();
   </script>
 </body>
 </html>
