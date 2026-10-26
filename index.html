@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Yonnovate | Health innovation across Israel &amp; MENA</title>
-  <meta name="description" content="Yonnovate is a full-value-chain platform for health innovation in Israel and MENA: ingredient, formulation, manufacturing and brand, with regulation, logistics and kosher certification.">
+  <title>Yonnovate | Orchestrating Health Innovation in Israel</title>
+  <meta name="description" content="Yonnovate orchestrates health innovation in Israel, from ingredient to shelf. Formulation, manufacturing, regulation, distribution and logistics, executed on the ground.">
   <link rel="canonical" href="https://yonnovate.com/">
   <meta name="theme-color" content="#0B0C0C">
 
@@ -12,8 +12,8 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Yonnovate">
   <meta property="og:url" content="https://yonnovate.com/">
-  <meta property="og:title" content="Yonnovate | Health innovation across Israel &amp; MENA">
-  <meta property="og:description" content="Your bridge to health innovation across Israel and MENA. From ingredient to shelf.">
+  <meta property="og:title" content="Yonnovate | Orchestrating Health Innovation in Israel">
+  <meta property="og:description" content="Your bridge to health innovation in Israel. From ingredient to shelf, executed on the ground.">
   <meta property="og:image" content="https://yonnovate.com/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -37,8 +37,8 @@
     "url": "https://yonnovate.com/",
     "logo": "https://yonnovate.com/icon-192.png",
     "email": "y@yonnovate.com",
-    "description": "Full-value-chain platform for health innovation in Israel and MENA.",
-    "areaServed": ["Israel", "Middle East and North Africa"],
+    "description": "Yonnovate orchestrates health innovation in Israel, from ingredient to shelf.",
+    "areaServed": ["Israel"],
     "founder": { "@type": "Person", "name": "Yotam Hod" }
   }
   </script>
@@ -101,24 +101,48 @@
       from { opacity: 0; transform: translateY(8px) scaleX(0.92); }
       to   { opacity: 1; transform: none; }
     }
+    .eyebrow {
+      margin: 0 0 20px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+    }
     h1 {
       margin: 0;
       font-weight: 600;
       font-size: clamp(2.1rem, 5.4vw, 4.25rem);
       line-height: 1.08;
       letter-spacing: -0.025em;
-      max-width: 16ch;
+      max-width: 18ch;
       text-wrap: balance;
     }
-    .soon {
+    .lede {
       margin: 28px 0 0;
-      font-family: var(--serif);
-      font-style: italic;
-      font-weight: 500;
-      font-size: clamp(1.125rem, 2vw, 1.375rem);
+      max-width: 46ch;
+      font-size: clamp(1.0625rem, 1.6vw, 1.25rem);
+      line-height: 1.6;
       color: var(--muted);
+      text-wrap: pretty;
     }
-
+    .cta {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 36px;
+      padding: 14px 24px;
+      background: var(--teal-light);
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background-color 200ms var(--ease);
+    }
+    .cta:hover { background: var(--paper); }
+    .cta svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: square; transition: transform 200ms var(--ease); }
+    .cta:hover svg { transform: translateX(3px); }
 
     /* Partner logos: runs right to left */
     .partners {
@@ -142,7 +166,7 @@
       display: flex;
       width: max-content;
       background: var(--ink);
-      animation: run 48s linear infinite;
+      animation: run 52s linear infinite;
     }
     .marquee:hover .marquee-track { animation-play-state: paused; }
     .marquee ul {
@@ -214,10 +238,13 @@
     @media (max-width: 600px) {
       .logo { width: 120px; }
       main { padding-block: 48px; }
+      .eyebrow { font-size: 0.75rem; margin-bottom: 16px; }
+      .lede { margin-top: 20px; }
+      .cta { margin-top: 28px; }
       footer { flex-direction: column; align-items: flex-start; }
       .marquee img { height: 26px; max-width: 130px; }
       .marquee .name { font-size: 1rem; }
-      .marquee-track { animation-duration: 36s; }
+      .marquee-track { animation-duration: 40s; }
     }
     @media (prefers-reduced-motion: reduce) {
       .arc path { animation: none; }
@@ -246,27 +273,33 @@
     <svg class="arc" viewBox="330 20 1248 176" preserveAspectRatio="xMinYMid meet" aria-hidden="true" focusable="false">
       <path fill="currentColor" d="M276.80 194.30 L322.50 120.80 C703.42 -19.11 1208.28 -16.89 1576.50 161.00 L1570.75 164.67 C1167.66 6.74 671.48 9.81 276.80 194.30Z"/>
     </svg>
-    <h1>Your bridge to health innovation across Israel &amp; MENA</h1>
-    <p class="soon">Launching soon.</p>
+    <p class="eyebrow">Orchestrating health innovation</p>
+    <h1>Your bridge to health innovation in Israel.</h1>
+    <p class="lede">From ingredient to shelf, we run the execution on the ground: sourcing, formulation, manufacturing, regulation, distribution and logistics.</p>
+    <a class="cta" href="mailto:y@yonnovate.com">
+      Get in touch
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h14M13 6.5 18.5 12 13 17.5"/></svg>
+    </a>
   </main>
 
   <section class="partners" aria-labelledby="partners-label">
-    <p class="partners-label" id="partners-label">As trusted by</p>
+    <p class="partners-label" id="partners-label">TRUSTED BYh</p>
     <div class="marquee">
       <div class="marquee-track">
         <ul>
           <li><img src="https://pareo.co.il/wp-content/uploads/2020/11/shastovitz-300x89.webp" alt="Schestowitz" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://www.tevapharm.com/globalassets/scs-branded-images/generic/teva-logo.svg" alt="Teva" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://www.supherb.co.il/wp-content/uploads/2022/01/logo.svg" alt="Supherb" height="32" referrerpolicy="no-referrer"></li>
+          <li><img src="https://shor.co.il/wp-content/uploads/2026/03/logo11.svg" alt="Shor Tabachnik" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://www.altman.co.il/wp-content/uploads/2025/11/34210_EN_Logo-01.png" alt="Altman" height="32" referrerpolicy="no-referrer"></li>
-          <li><img src="https://www.strauss-group.com/wp-content/blogs.dir/3/files/sites/3/strauss_eng.jpg" alt="Strauss Group" height="32" referrerpolicy="no-referrer"></li>
-          <li><img src="https://compasshealthcare.eu/wp-content/uploads/2025/05/logo-header.svg" alt="Compass Healthcare" height="32" referrerpolicy="no-referrer"></li>
+          <li><img src="https://companieslogo.com/img/orig/STRS.TA_BIG-5331a6cf.svg?t=1751136651" alt="Strauss Group" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://www.botanibrands.com/wp-content/uploads/2023/04/logo-header-botani-brands.png" alt="Botani Brands" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://nicholashall.com/uploads/components/sitesettings/NICHOLASHALL-STACKED-CHC-2-5e0f44ba11715.svg" alt="Nicholas Hall Group" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://www.noveltypharma.com/wp-content/uploads/2024/05/novelty-pharma-logo-red-retina.png" alt="Novelty Pharma" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://sanaplus.com/wp-content/uploads/2022/01/sanaplus-logo2.svg" alt="Sana+" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://storage.googleapis.com/cdn-activ-inside-site-20/production/2021/02/logo-activinside.png" alt="Activ&#39;Inside" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://phyteo-laboratoire.com/wp-content/uploads/2026/04/LOGO-PHYTEO-QUADRI-1.png" alt="Phyteo" height="32" referrerpolicy="no-referrer"></li>
+          <li><img src="https://cvetevepruvetka.store/wp-content/uploads/2025/08/proviotic-logo.png" alt="Proviotic" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="/logos/biobar.svg" alt="BioBar" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://mayven.co/cdn/shop/files/Layer_1_110x.svg?v=1694513325" alt="Mayven" height="32" referrerpolicy="no-referrer"></li>
         </ul>
@@ -274,15 +307,16 @@
           <li><img src="https://pareo.co.il/wp-content/uploads/2020/11/shastovitz-300x89.webp" alt="Schestowitz" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://www.tevapharm.com/globalassets/scs-branded-images/generic/teva-logo.svg" alt="Teva" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://www.supherb.co.il/wp-content/uploads/2022/01/logo.svg" alt="Supherb" height="32" referrerpolicy="no-referrer"></li>
+          <li><img src="https://shor.co.il/wp-content/uploads/2026/03/logo11.svg" alt="Shor Tabachnik" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://www.altman.co.il/wp-content/uploads/2025/11/34210_EN_Logo-01.png" alt="Altman" height="32" referrerpolicy="no-referrer"></li>
-          <li><img src="https://www.strauss-group.com/wp-content/blogs.dir/3/files/sites/3/strauss_eng.jpg" alt="Strauss Group" height="32" referrerpolicy="no-referrer"></li>
-          <li><img src="https://compasshealthcare.eu/wp-content/uploads/2025/05/logo-header.svg" alt="Compass Healthcare" height="32" referrerpolicy="no-referrer"></li>
+          <li><img src="https://companieslogo.com/img/orig/STRS.TA_BIG-5331a6cf.svg?t=1751136651" alt="Strauss Group" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://www.botanibrands.com/wp-content/uploads/2023/04/logo-header-botani-brands.png" alt="Botani Brands" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://nicholashall.com/uploads/components/sitesettings/NICHOLASHALL-STACKED-CHC-2-5e0f44ba11715.svg" alt="Nicholas Hall Group" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://www.noveltypharma.com/wp-content/uploads/2024/05/novelty-pharma-logo-red-retina.png" alt="Novelty Pharma" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://sanaplus.com/wp-content/uploads/2022/01/sanaplus-logo2.svg" alt="Sana+" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://storage.googleapis.com/cdn-activ-inside-site-20/production/2021/02/logo-activinside.png" alt="Activ&#39;Inside" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://phyteo-laboratoire.com/wp-content/uploads/2026/04/LOGO-PHYTEO-QUADRI-1.png" alt="Phyteo" height="32" referrerpolicy="no-referrer"></li>
+          <li><img src="https://cvetevepruvetka.store/wp-content/uploads/2025/08/proviotic-logo.png" alt="Proviotic" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="/logos/biobar.svg" alt="BioBar" height="32" referrerpolicy="no-referrer"></li>
           <li><img src="https://mayven.co/cdn/shop/files/Layer_1_110x.svg?v=1694513325" alt="Mayven" height="32" referrerpolicy="no-referrer"></li>
         </ul>
