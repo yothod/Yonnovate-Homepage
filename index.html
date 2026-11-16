@@ -266,7 +266,9 @@
 
     /* Closing CTA */
     .cta { padding-block: 104px 112px; text-align: center; }
-    .cta h2 { margin: 0 auto 36px; max-width: 18ch; }
+    .cta h2 { margin: 0 auto 20px; max-width: 24ch; }
+    @media (min-width: 761px) { .cta h2 .l2 { display: block; } }
+    .cta-sub { margin: 0 auto 40px; max-width: 46ch; font-family: var(--serif); font-style: italic; font-size: clamp(1.0625rem, 1.5vw, 1.25rem); line-height: 1.5; color: var(--soft); }
     .btn { display: inline-flex; align-items: center; gap: 12px; padding: 16px 32px; border-radius: 999px; background: var(--teal-light); color: var(--ink); font-weight: 600; text-decoration: none; transition: transform 200ms var(--ease), background 200ms var(--ease); }
     .btn:hover { background: var(--paper); transform: translateY(-2px); }
     .btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: square; }
@@ -556,7 +558,8 @@
     </section>
 
     <section class="band cta" aria-labelledby="cta-title">
-      <h2 id="cta-title">Have a health product or idea? Let’s bring it to market in Israel.</h2>
+      <h2 id="cta-title">Have a health product or idea? <span class="l2">Let’s bring it to market in Israel.</span></h2>
+      <p class="cta-sub">Whether it’s new or already selling abroad, we’ll map the path to the shelf.</p>
       <a class="btn" href="mailto:y@yonnovate.com?subject=Working%20with%20Yonnovate">Let's talk<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h14M13 6.5 18.5 12 13 17.5"/></svg></a>
     </section>
   </main>
